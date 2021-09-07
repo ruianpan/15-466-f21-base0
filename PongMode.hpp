@@ -31,13 +31,20 @@ struct PongMode : Mode {
 	glm::vec2 right_paddle = glm::vec2( court_radius.x - 0.5f, 0.0f);
 
 	glm::vec2 ball = glm::vec2(0.0f, 0.0f);
-	glm::vec2 ball_velocity = glm::vec2(-1.0f, 0.0f);
+	glm::vec2 ball_velocity = glm::vec2(1.0f, 0.0f);
 
 	uint32_t left_score = 0;
 	uint32_t right_score = 0;
 
-	float ai_offset = 0.0f;
-	float ai_offset_update = 0.0f;
+	uint32_t aimmode = 0;
+
+	glm::vec2 aimball_velocity = glm::vec2(1.0f, 0.0f);
+
+	float speed_multiplier = 4.0f;
+
+	uint32_t direction = 0; //0 is down, 1 is up, this is the direction flag for the ai
+	uint32_t reset = 1; //the reset flag for  the game, when this is 1, the ball should be on the left paddle waiting to be shot
+
 
 	//----- pretty gradient trails -----
 
