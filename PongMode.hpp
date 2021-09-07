@@ -27,6 +27,9 @@ struct PongMode : Mode {
 	glm::vec2 paddle_radius = glm::vec2(0.2f, 1.0f);
 	glm::vec2 ball_radius = glm::vec2(0.2f, 0.2f);
 
+	glm::vec2 gunrec1_radius = glm::vec2(0.2f, 0.5f);
+	glm::vec2 gunrec2_radius = glm::vec2(1.0f, 0.1f);
+
 	glm::vec2 left_paddle = glm::vec2(-court_radius.x + 0.5f, 0.0f);
 	glm::vec2 right_paddle = glm::vec2( court_radius.x - 0.5f, 0.0f);
 
